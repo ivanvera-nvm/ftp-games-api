@@ -5,13 +5,13 @@
   font-family: "Neo Sans Std TR", sans-serif;
   font-size: 3.5em;
   letter-spacing: 15px;
-  color: #0e3742;
+  color: #16566985;
   text-transform: uppercase;
   width: 100%;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
   line-height: 1em;
   outline: none;
-  animation: animate 8s ease-in-out infinite;
+  animation: animate 3s backwards infinite;
 }
 
 @keyframes animate {
@@ -20,7 +20,7 @@
     text-shadow: none;
   }
 
-  100% {
+  50% {
     color: #fff;
     text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
       0 0 80px #03bcf4, 0 0 160px #03bcf4;
