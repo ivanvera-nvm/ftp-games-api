@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   display: grid;
   height: 100vh;
@@ -35,6 +39,7 @@ main {
   grid-area: main;
   display: flex;
   justify-content: center;
+
   align-items: center;
   color: white;
 }
@@ -47,7 +52,13 @@ main {
   color: white;
 }
 #content1 {
+  margin-top: 2rem;
+  width: 90%;
   grid-area: content1;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   color: white;
   border: 2px dashed plum;
 }

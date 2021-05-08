@@ -3,20 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0;
+  margin: 1rem 0 1rem 0;
   width: 90%;
   height: 100%;
-  background: #1f1f1f;
-  border: 1px solid purple;
+  /*   background: var(--secondary-bg-color); */
   border-radius: 0.3rem;
-
+  /*   border: 2px solid blue; */
 }
 
 .list-items {
-  border: 1px dotted white;
-  margin: 1rem 0 1rem 0;
+  border: 1px solid white;
+  margin: 2rem 0 1rem 0;
   height: 10rem;
-  width: 100%;
+  width: 85%;
   border-radius: 0.3rem;
 }
 
@@ -31,11 +30,28 @@
 
 .img {
   color: yellow;
-  width: 30%;
-  border: 1px solid purple;
+  min-width: 20%;
+  border-right: 1px solid silver;
+  background: url("https://www.freetogame.com/g/452/thumbnail.jpg");
+  background-repeat: no-repeat;
 }
 
 .info {
-  width: 70%;;
+  width: 100%;
+  background: var(--secondary-bg-color);
   color: palevioletred;
+}
+
+.filter-container {
+  border: 1px dashed turquoise;
+  margin: 1rem 0 0 0;
+  width: 85%;
+  height: 50px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
 }
