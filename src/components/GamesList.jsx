@@ -1,18 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { allGames } from "../store/games";
 import "../styles/list.css";
 
 const list = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const filters = ["Platform:", "Genre/Tag:", "Sort by:", "Advanced filter:"];
 
 const GamesList = () => {
+  const dispatch = useDispatch();
+
+  const games = useSelector((state) => state.games.games.slice(0, 10));
+
+  useEffect(() => {
+    dispatch(allGames());
+  }, []);
+
+  console.log(games);
+
   return (
     <div className="list">
       <span className="filter-container">
         <ul className="filters">
           {filters.map((item, i) => (
-            <li>
+            <li key={i}>
               <a>
                 {item}
                 <i className="icon" />
@@ -21,15 +31,18 @@ const GamesList = () => {
           ))}
         </ul>
       </span>
-      {list.map((items, i) => (
+      {games.map((game, i) => (
         <div key={i} className="list-items">
           <div className="item-section">
-            <img
-              className="img"
-              src="https://www.freetogame.com/g/452/thumbnail.jpg"
-              alt="cover"
-            ></img>
-            <div className="info">Information</div>
+            <img className="img" src={game.thumbnail} alt="cover"></img>
+            <div className="info">
+              <p>{game.title}</p>
+              <p>{game.genre}</p>
+              <p>{game.short_description}</p>
+              <p>{game.release_date}</p>
+          {/*     <p>{game.publisher}</p>
+              <p>{game.platform}</p> */}
+            </div>
           </div>
         </div>
       ))}

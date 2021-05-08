@@ -13,20 +13,20 @@ export default function Styled() {
         Test components
       </h1>
 
-      <Link className="btn-box" href="#">
+      <Link to="#" key={1} className="btn-box" href="#">
         {spanChilds.map((child) => (
           <span className="btn-spn"></span>
         ))}
         button 1
       </Link>
-      <Link className="btn-box" href="#">
+      <Link to="#" key={2} className="btn-box" href="#">
         {spanChilds.map((child) => (
           <span className="btn-spn"></span>
         ))}
         button 2
       </Link>
 
-      <Link className="btn-box" href="#">
+      <Link to="#" key={3} className="btn-box" href="#">
         {spanChilds.map((child) => (
           <span className="btn-spn"></span>
         ))}
