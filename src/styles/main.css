@@ -2,41 +2,73 @@
 
 @import "navItems.css";
 
+:root {
+  --main-bg-color: #1a1a1a;
+  --secondary-bg-color: #272727;
+}
+
 body {
-  background: #0c0c0c;
-  padding: 0;
+  background: var(--main-bg-color);
   margin: 0;
-}
-
-h1 {
-  color: white;
-  font-family: "Neo Sans Std TR", sans-serif;
-}
-
-.navbar {
-  background: #161616;
-  overflow: hidden;
   padding: 0;
-  margin: 0;
-  height: 80px;
-  border-bottom: 1px solid #14ffec;
-  width: 100%;
 }
 
-.sider {
-  display: flex;
-  background: #161616;
-  flex-direction: column;
-  line-height: 4rem;
-  height: 100vh;
-  width: 10rem;
-  position: relative;
-  padding: 0;
-  margin: 0;
-  border-right: 1px solid #14ffec;
-}
-
-.new-content {
+.container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  grid-template-columns: 0.3fr 2.5fr;
+  grid-template-rows: 80px 175px 1.2fr 120px;
+  grid-template-areas:
+    "nav nav "
+    "sidebar content1"
+    "sidebar main"
+    "sidebar footer";
+}
+
+nav {
+  grid-area: nav;
+  background: var(--secondary-bg-color);
+  color: white;
+  border-bottom: 1px solid #14ffec;
+}
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background: var(--secondary-bg-color);
+  line-height: 3.5rem;
+  border-right: 1px solid #14ffec;
+  color: white;
+}
+#content1 {
+  grid-area: content1;
+  color: white;
+  border: 2px dashed plum;
+}
+
+footer {
+  grid-area: footer;
+  color: white;
+  border: 2px dashed green;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 0.4fr) 2.2fr repeat(3, 1.2fr) 0.8fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
 }

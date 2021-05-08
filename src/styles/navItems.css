@@ -5,8 +5,9 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-top: 30%;
+  margin-top: 12%;
   width: 100%;
+  list-style: none;
 }
 
 .sider-item {
@@ -17,15 +18,14 @@
 .sider-btn {
   width: 100%;
   font-family: "Neo Sans Std TR", sans-serif;
-  position: relative;
   display: inline-block;
   color: #03e9f4;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   transition: 0.5s;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .sider-btn:hover {
