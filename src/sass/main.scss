@@ -1,0 +1,214 @@
+@import url("http://fonts.cdnfonts.com/css/neo-sans-std-tr");
+
+$colors: (
+  main: #1a1a1a,
+  secondary: #202020,
+  border-neon: 1px solid #14ffec,
+  test: 2px dashed lime,
+  list-bg: #0d7377,
+  list-txt: #CDCDCD,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+body {
+  background: color(main);
+  font-family: "Neo Sans Std TR", sans-serif;
+  font-size: calc(0.6rem + (20 - 12) * ((100vw - 0.3rem) / (1920 - 200)));
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.3fr 2.5fr;
+  grid-template-rows: 80px 175px 1.2fr 120px;
+  grid-template-areas:
+    "nav nav "
+    "sidebar content1"
+    "sidebar main"
+    "sidebar footer";
+}
+
+#sidebar {
+  grid-area: sidebar;
+  background: color(secondary);
+  line-height: 3.5rem;
+  border-right: color(border-neon);
+  color: white;
+}
+#content1 {
+  margin-top: 2rem;
+  width: 90%;
+  grid-area: content1;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  border: 2px dashed plum;
+}
+
+nav {
+  grid-area: nav;
+  background: color(secondary);
+  color: white;
+  border-bottom: color(border-neon);
+}
+
+.sider-list {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 12%;
+  width: 100%;
+  list-style: none;
+}
+
+.sider-btn {
+  width: 100%;
+  display: inline-block;
+  color: #03e9f4;
+  /*  font-size: 0.8rem; */
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 0.2rem;
+}
+
+.sider-btn:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  color: white;
+  border: 2px dashed green;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 0.4fr) 2.2fr repeat(3, 1.2fr) 0.8fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+
+/// NEON TEXT
+.inter-text-h1 {
+  text-align: center;
+  /*   font-size: 1.4em; */
+  text-align: center;
+  overflow: hidden;
+  letter-spacing: 15px;
+  color: #16566985;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 1em;
+  outline: none;
+  animation: animate 3s backwards infinite;
+}
+
+@keyframes animate {
+  50% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+
+  50% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
+
+///LIST
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 0 1rem 0;
+  width: 90%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.list-items {
+  margin: 2rem 0 1rem 0;
+  max-height: auto;
+  width: 85%;
+  border-radius: 0.5rem;
+  border: 1px solid silver;
+}
+
+.item-section {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+/*   height: auto;
+  max-width: 100%; */
+  color: color(list-txt);
+  overflow: hidden;
+  border-color: color(border-neon);
+  background: color(list-bg);
+  p {
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    position: relative;
+    font-size: 0.8rem;
+    line-height: 0.8;
+  }
+}
+
+.img {
+  color: yellow;
+  height: auto;
+  max-width: 30%;
+  background: url("https://www.freetogame.com/g/452/thumbnail.jpg");
+  background-repeat: no-repeat;
+}
+
+.filter-container {
+  border: 1px dashed turquoise;
+  margin: 1rem 0 0 0;
+  width: 85%;
+  height: 50px;
+  font-size:  calc(0.5rem + (18 - 12) * ((100vw - 0.3rem) / (1920 - 200)));
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem 0 2rem;
+}

@@ -4,6 +4,7 @@ import Body from "../components/Body";
 import Styled from "../components/Styled";
 import App from "./App";
 
+
 export default function Index() {
   return (
     <>

@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../styles/buttons.css";
-import "../styles/neonText.css";
 
 const spanChilds = [1, 2, 3, 4];
 

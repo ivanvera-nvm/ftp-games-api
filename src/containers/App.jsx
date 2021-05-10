@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import GamesList from "../components/GamesList";
 
-import "../styles/main.css";
-import "../styles/neonText.css";
+import "../sass/main.scss";
+
 
 const siderItems = ["My List", "Top 10", "Reviews"];
 
@@ -16,7 +16,7 @@ function App() {
       <div id="sidebar">
         <ul className="sider-list">
           {siderItems.map((item, i) => (
-            <li key={i} className="sider-item">
+            <li key={i}>
               <Link to="#" className="sider-btn">
                 {item}
               </Link>
