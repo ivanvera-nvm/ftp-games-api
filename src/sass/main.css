@@ -51,7 +51,7 @@ ul {
       -ms-flex-direction: row;
           flex-direction: row;
   color: white;
-  border: 2px dashed plum;
+  /*   border: 2px dashed plum; */
 }
 
 nav {
@@ -85,6 +85,7 @@ nav {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 
 .sider-btn:hover {
@@ -115,7 +116,8 @@ footer {
   -ms-grid-column: 2;
   grid-area: footer;
   color: white;
-  border: 2px dashed green;
+  border-top: 1px solid #14ffec;
+  /*  border: 2px dashed green; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -208,7 +210,7 @@ footer {
   color: #CDCDCD;
   overflow: hidden;
   border-color: 1px solid #14ffec;
-  background: #0d7377;
+  background: #102829;
 }
 
 .item-section p {
@@ -228,7 +230,7 @@ footer {
 }
 
 .filter-container {
-  border: 1px dashed turquoise;
+  /*   border: 1px dashed turquoise; */
   margin: 1rem 0 0 0;
   width: 85%;
   height: 50px;
@@ -247,5 +249,6 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 2rem 0 2rem;
+  letter-spacing: 0.070rem;
 }
 /*# sourceMappingURL=main.css.map */

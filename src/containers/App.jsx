@@ -17,9 +17,9 @@ function App() {
         <ul className="sider-list">
           {siderItems.map((item, i) => (
             <li key={i}>
-              <Link to="#" className="sider-btn">
+              <div onClick={()=>console.log('click')} className="sider-btn">
                 {item}
-              </Link>
+              </div>
             </li>
           ))}
         </ul>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allGames } from "../store/games";
 
-const list = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const filters = ["Platform:", "Genre/Tag:", "Sort by:", "Advanced filter:"];
 
 const GamesList = () => {
